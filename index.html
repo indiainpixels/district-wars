@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        background: #fff;
+      }
+
+      #yrwrapper {
+        height: 100vh;
+        width: 300px;
+        background: #f4dac1;
+        display: none;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        color: #51422d;
+        padding: 20px;
+      }
+
+      #yrcounter {
+        font-weight: 800;
+        font-size: 5em;
+        text-align: center;
+        margin-bottom: 25px;
+        position: absolute;
+        left: 1200px;
+        top: 100px;
+      }
+
+      .flagbox {
+        display: flex;
+        align-items: center;
+        margin-left: 50px;
+        margin-bottom: -25px;
+      }
+
+      #top5 {
+        margin-top: 50px;
+      }
+
+      .flag {
+        font-size: 5em;
+        margin-right: 25px;
+        margin-top: 20px;
+      }
+
+      #remain {
+        font-size: 1em;
+        font-weight: 900;
+        margin-bottom: 25px;
+      }
+
+      h2 {
+        margin: 12px 0;
+      }
+
+      #remainlist {
+        margin-top: 32px;
+        width: 300px;
+      }
+
+      .ldr-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 12px;
+      }
+
+      .vaal {
+        font-weight: 600;
+        font-size: 2em;
+      }
+      #yrbars {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        left: 250px;
+        top: 400px;
+      }
+      .baar {
+        height: 2px;
+        background: yellow;
+        margin-bottom: 1px;
+        opacity: 0;
+        transition: 0.2s ease-in opacity;
+      }
+      #yrline {
+        position: absolute;
+        left: 249px;
+        height: 1005px;
+        top: 10px;
+        background: black;
+        width: 1px;
+      }
+      #yrlinelabel {
+        position: absolute;
+        text-align: right;
+        color: black;
+        left: 79px;
+        top: 5.5px;
+        display: flex;
+        font-family: 'Monaco';
+      }
+      #yrlinelabeldate {
+        font-weight: 800;
+        font-size: 1.4em;
+      }
+      #yrlineline {
+        margin-left: 20px;
+        margin-top: -30px;
+        display: flex;
+        align-items: center;
+      }
+      #yrlinelinecircle {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: black;
+      }
+      #yrlinelineline {
+        width: 60px;
+        height: 2px;
+        background: black;
+      }
+      #margo {
+        margin-top: -10px;
+      }
+      #top5 {
+        position: absolute;
+        left: 1250px;
+        top: 100px;
+        font-size: 24px;
+      }
+      #title {
+        color: black;
+        padding: 4px 10px;
+        display: inline-block;
+        font-size: 42px;
+        font-weight: 900;
+      }
+      .toplist {
+        margin-top: 20px;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="yrbars">
+      <h2>Top 10 Districts by Population</h2>
+      <div id="remain">Districts Remaining</div>
+      <div id="remainlist">Loading...</div>
+    </div>
+    <div id="top5"></div>
+    <div id="yrwrapper"></div>
+    <div id="top5">
+      <div class="toplist"></div>
+    </div>
+    <div id="map"></div>
+    <script src="d3.js"></script>
+    <script src="conf.js"></script>
+    <script src="d3geo.js"></script>
+    <script src="topojson.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
